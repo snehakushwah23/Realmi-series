@@ -1,0 +1,47 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/sign_in.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="maindiv">
+        {% for i in Sign_BackGround_Img%}
+        <div class="imgblockk"><img class="imgblockk_Img" src="/media/{{i.SignBackGroundImg1}}"></div>
+        {%endfor%}
+        <div class="content">
+            <nav class="nav_Bar">
+                {% for i in sign_in_logo_Img %}
+               <img class="navImg" src="/media/{{i.sign_inlogoImg1}}"><h1 class="xioo">Xiaomi Account</h1>
+               {%endfor%}
+               <ul>
+                <li>User Agreement</li>
+                <li>Privacy Policy</li>
+                <li>Need help?</li>
+                <li>|</li>
+                <li>Select Your Language</li>
+               </ul>
+            </nav>
+
+            <div class="form_Div">
+                <h1 class="h1">Sign in</h1><h1 class="h2"><a href="{% url 'sign_up'%}">Sign up</a></h1>
+                <form>
+                    <input type="text" placeholder="Email/Phone/Xiomi Account">
+                    <input type="password" placeholder="Password">
+                    <input id="subm" type="submit" placeholder="Sign in">
+                    <input type="#" placeholder="Sign in with Google">
+                    <div class="p"><p class="p1">Forget password?</p><p class="p2">Sign in using phone number</p></div>
+                    <p class="p3">More options</p>
+                    <i class="fa-brands fa-facebook"></i>
+                    
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

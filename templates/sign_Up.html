@@ -1,0 +1,47 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/sigup.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="maindiv">
+        {% for i in Sign_up_Img%}
+        <div class="imgblockk"><img class="imgblockk_Img" src="/media/{{i.sign_upBackground_Img}}"></div>
+        
+        <div class="content">
+            <nav class="nav_Bar">
+                
+               <img class="navImg" src="/media/{{i.sign_up_LogoImg}}"><h1 class="xioo">Xiaomi Account</h1>
+               {%endfor%}
+               <ul>
+                <li>User Agreement</li>
+                <li>Privacy Policy</li>
+                <li>Need help?</li>
+                <li>|</li>
+                <li>Select Your Language</li>
+               </ul>
+            </nav>
+
+            <div class="form_Div">
+                <h1 class="h1"> <a href="{% url 'sign'%}">Sign in</a> </h1><h1 class="h2">Sign up</h1>
+                <form>
+                    <input type="text" placeholder="Region">
+                    <input type="url" placeholder="Email">
+                    <input type="password" placeholder="Set password">
+                    <input type="password" placeholder="Enter your password again">
+                    <div class="p"><p>Password must be 8-16 charcters and include both numbers and letters</p></div>
+                    <input id="subm" type="submit" placeholder="Next">
+                   
+                    
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

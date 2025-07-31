@@ -1,0 +1,522 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/xxx.css'%}">
+    <link rel="stylesheet" href="{% static 'css/smm.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="search">
+            <div class="iSearc">
+                <div class="seaaIcon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+
+        {%for i in nav %}
+        <img class="navImg" src="/media/{{i.logo_img}}">
+        <ul class="navbarUl">
+            <li id="li1">{{i.li1}}</li>
+            <li id="li2">{{i.li2}}</li>
+            <li id="li3">{{i.li3}}</li>
+            <li id="li4">{{i.li4}}</li>
+            <li id="li5">{{i.li5}}</li>
+        </ul>
+        <div class="ul2">
+            <li id="li6">{{i.li6}}</li>
+            <li>{{i.li7}}</li>
+            <li>{{i.li8}}</li>
+        </div>
+        <div class="ions">
+            <i class="fa-solid fa-magnifying-glass" id="seaa"></i>
+            <i class="fa-regular fa-user" id="cont"></i>
+        </div>
+    </nav>
+    
+    <div class="contact">
+        <button class="sign_In"><a href="{% url 'sign'%}">Sign In</a></button>
+        <button class="sign_Up"><a href="{% url 'sign_up'%}">Sign Up</a></button>
+    </div>
+
+    <!--/block1 -->
+
+    <div class="mobile">
+        <div class="innerMoblie">
+            <ul>
+                <li class="ph">Phones</li>
+                <li class="xio">XiomiSeries</li>
+                <li class="red">Redmi Series</li>
+                <li class="poco">POCO Phones</li>
+                <li class="table">Tablets</li>
+                <li class="laptop">Laptops</li>
+            </ul>
+            
+            <div class="imgblockXiomi">
+                {% for i in secMobile%}
+                <div class="imgblockDiv1"><img class="block1img" src="/media/{{i.mob_1}}"><h1>Xiomi FIX Flip</h1></div>
+                <div class="imgblockDiv2"><img class="block1img" src="/media/{{i.mob_2}}"><h1>Xiomi 15 Ultra</h1></div>
+                <div class="imgblockDiv3"><img class="block1img" src="/media/{{i.mob_3}}"><h1>Xiomi 15</h1></div>
+                <div class="imgblockDiv4"><img class="block1img" src="/media/{{i.mob_4}}"><h1>Xiomi 14T Pro</h1></div>
+                <div class="imgblockDiv5"><img class="block1img" src="/media/{{i.mob_5}}"><h1>Xiomi 14 Ultra</h1></div>
+                {% endfor %}
+            </div>
+
+            <div class="imgblockREDMI_Series">
+                {% for i in redSeries %}
+                <div class="imgblockDiv1"><img class="block1img" src="/media/{{i.red_1}}"><h1>Redmi 14 Pro+ 5G</h1></div>
+                <div class="imgblockDiv2"><img class="block1img" src="/media/{{i.red_2}}"><h1>Redmi Note 14 5G</h1></div>
+                <div class="imgblockDiv3"><img class="block1img" src="/media/{{i.red_3}}"><h1>Redmi 13</h1></div>
+                <div class="imgblockDiv4"><img class="block1img" src="/media/{{i.red_4}}"><h1>Redmi 14C</h1></div>
+                <div class="imgblockDiv5"><img class="block1img" src="/media/{{i.red_5}}"><h1>Redmi A3x</h1></div>
+                {% endfor %}
+            </div>
+
+            <div class="imgblockPOCO_Series">
+                {% for i in pocoo %}
+                <div class="imgblockDiv1"><img class="block1img" src="/media/{{i.poco_1}}"><h1>POCO F7 Ultr</h1></div>
+                <div class="imgblockDiv2"><img class="block1img" src="/media/{{i.poco_2}}"><h1>POCO F7 Pro</h1></div>
+                <div class="imgblockDiv3"><img class="block1img" src="/media/{{i.poco_3}}"><h1>POCO x7 Pro</h1></div>
+                <div class="imgblockDiv4"><img class="block1img" src="/media/{{i.poco_4}}"><h1>POCO M6</h1></div>
+                <div class="imgblockDiv5"><img class="block1img" src="/media/{{i.poco_5}}"><h1>POCO C75</h1></div>
+                {% endfor%}
+            </div>
+
+            <div class="imgblockTABLETS">
+                {% for i in table_t %}
+                <div class="imgblockDiv1"><img class="block1img" src="/media/{{i.tablet_1}}"><h1>Xiomi Pad 7 Pro</h1></div>
+                <div class="imgblockDiv2"><img class="block1img" src="/media/{{i.tablet_2}}"><h1>xiomi Pad 6S Pro 12.4</h1></div>
+                <div class="imgblockDiv3"><img class="block1img" src="/media/{{i.tablet_3}}"><h1>Redmi Pad Pro 5G</h1></div>
+                <div class="imgblockDiv4"><img class="block1img" src="/media/{{i.tablet_4}}"><h1>Redmi Pad SE 8.7</h1></div>
+                <div class="imgblockDiv5"><img class="block1img" src="/media/{{i.tablet_5}}"><h1>POCO Pad</h1></div>
+                {%endfor%}
+            </div>
+
+            <div class="imgblockLaptop">
+                {% for i in l_apto%}
+                <div class="imgblockDiv1"><img class="block1img" src="/media/{{i.lapSeries1}}"><h1>Xiomi Book 14</h1></div>
+                <div class="imgblockDiv2"><img class="block1img" src="/media/{{i.lapSeries2}}"><h1>RedmiBook 15</h1></div>
+                <div class="imgblockDiv3"><img class="block1img" src="/media/{{i.lapSeries3}}"><h1>XiomiBook S 12.4"</h1></div>
+                <div class="imgblockDiv4"><img class="block1img" src="/media/{{i.lapSeries4}}"><h1>Xiomi Book 14</h1></div>
+                <div class="imgblockDiv5"><img class="block1img" src="/media/{{i.lapSeries5}}"><h1>XiomiBook S 12.4"</h1></div>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+
+    <!--/block2 -->
+
+    <div class="Wearables">
+        <div class="innerMoblie">
+            <ul>
+                <li class="sm">Smart Watches</li>
+                <li class="bran">Smart Brands</li>
+                <li class="tw_s">TWS Earphones</li>
+            </ul>
+            
+            <div class="imgblockSmart_Watches">
+                {% for i in Watc_h%}
+                <div class="imgblockDiv1"><img class="block1img" src="/media/{{i.watches1}}"><h1>{{i.watches_h1}}</h1></div>
+                <div class="imgblockDiv2"><img class="block1img" src="/media/{{i.watches2}}"><h1>{{i.watches_h2}}</h1></div>
+                <div class="imgblockDiv3"><img class="block1img" src="/media/{{i.watches3}}"><h1>{{i.watches_h3}}</h1></div>
+                <div class="imgblockDiv4"><img class="block1img" src="/media/{{i.watches4}}"><h1>{{i.watches_h4}}</h1></div>
+                <div class="imgblockDiv5"><img class="block1img" src="/media/{{i.watches5}}"><h1>{{i.watches_h5}}</h1></div>
+                {% endfor %}
+            </div>
+
+            <div class="imgblockSmart_Brands">
+                {% for i in ba_nd %}
+                <div class="imgblockDiv1"><img class="block1img" src="/media/{{i.bands1}}"><h1>{{i.bands_h1}}</h1></div>
+                <div class="imgblockDiv2"><img class="block1img" src="/media/{{i.bands2}}"><h1>{{i.bands_h2}}</h1></div>
+                <div class="imgblockDiv3"><img class="block1img" src="/media/{{i.bands3}}"><h1>{{i.bands_h3}}></div>
+                <div class="imgblockDiv4"><img class="block1img" src="/media/{{i.bands4}}"><h1>{{i.bands_h4}}</h1></div>
+                <div class="imgblockDiv5"><img class="block1img" src="/media/{{i.bands5}}"><h1>{{i.bands_h15}}</h1></div>
+                {% endfor %}
+            </div>
+
+            <div class="imgblockTWS">
+                {% for i in Ear_p %}
+                <div class="imgblockDiv1"><img class="block1img" src="/media/{{i.Earphn1}}"><h1>{{i.Earphn_h1}}</h1></div>
+                <div class="imgblockDiv2"><img class="block1img" src="/media/{{i.Earphn2}}"><h1>{{i.Earphn_h2}}</h1></div>
+                <div class="imgblockDiv3"><img class="block1img" src="/media/{{i.Earphn3}}"><h1>{{i.Earphn_h3}}</h1></div>
+                <div class="imgblockDiv4"><img class="block1img" src="/media/{{i.Earphn4}}"><h1>{{i.Earphn_h4}}</h1></div>
+                <div class="imgblockDiv5"><img class="block1img" src="/media/{{i.Earphn5}}"><h1>{{i.Earphn_h5}}</h1></div>
+                {% endfor%}
+            </div>
+        </div>
+    </div>
+
+<!-- block - 3 -->
+
+    <div class="smart">
+        <div class="inner">
+
+            <div class="TV">
+               <h1>TVs & Media</h1>
+                <ul>
+                <li>TVs</li>
+                <li>TV Boxes/TV Sticks</li>
+                <li>Soundbars</li>
+                <li>Projectors</li>
+                <li>Smart Speakers</li>
+                <li>Microphone</li>
+                <li>Smart Clocks</li>
+                </ul>
+            </div>
+
+            <div class="VA">
+               <h1>Vacuum Cleaners</h1>
+               <ul>
+                <li>Robot Vacuums</li>
+                <li>Upright Vacuums</li>
+                <li>Wet-Dry Vacuums</li>
+                <li>Handheld Vacuums</li>
+                <li>Vacuum Cleaners Accessories</li>
+              </ul>
+            </div>
+
+            <div class="EN">
+               <h1>Environment Appliance</h1>
+               <ul>
+                <li>Accessories</li>
+                <li>Temperature and Humidity Monitors</li>
+                <li>Dehumidifiers</li>
+                <li>Humidifiers</li>
+                <li>Heaters</li>
+                <li>Fans</li>
+                <li>Air Purifiers</li>
+                </ul>
+            </div>
+
+            <div class="Kit">
+               <h1>Kitchen Appliance</h1>
+                <ul>
+                <li>Microwaves</li>
+                <li>Rice Cookers</li>
+                <li>Intuction Cookers</li>
+                <li>Cooking Robots</li>
+                <li>Blendrs</li>
+                <li>Air Fryers</li>
+                <li>Kettles</li>
+                </ul>
+            </div>
+
+            <div class="Smar">
+               <h1>Smart Lightings</h1>
+                <ul>
+                <li>Indoor Lightings</li>
+                <li>Smart Blubs</li>
+                </ul>
+            </div>
+        
+        </div>
+
+        <div class="Hom">
+           <h1>Home Security</h1>
+           <ul>
+            <li>Security Cameras</li>
+            <li>Smart Doorbells</li>
+            <li>Smart Door Locks</li>
+            <li>Smart Sensors & Hubs</li>
+            <li> Smart Plugs</li>
+            </ul>
+         </div>
+
+    </div>
+<!-- block - 4 -->
+
+    <div class="life_Style">
+        <div class="inner">
+
+            <div class="out">
+               <h1>Outdoors</h1>
+                <ul>
+                <li>Scooters</li>
+                <li>Air Compressors</li>
+                <li>Camping</li>
+                <li>Sunglases</li>
+                <li>Luglasses</li>
+                <li>Bags</li>
+                </ul>
+            </div>
+
+            <div class="off">
+               <h1>Office</h1>
+               <ul>
+                <li>Ink Pens</li>
+                <li>Keyboards and Mouse</li>
+                <li>Writing Tablets</li>
+                <li>Photo Printers</li>
+                <li>Wi-Fi Range Extenders</li>
+                <li>Routers</li>
+                <li>Monitors</li>
+              </ul>
+            </div>
+
+            <div class="health">
+               <h1>Health & Fitness</h1>
+               <ul>
+                <li>Electric Toothbrushes</li>
+                <li>Electric Shavers</li>
+                <li>Hair Drters</li>
+                <li>Hair Clippers</li>
+                <li>Scales</li>
+                <li>Massage Guns</li>
+                <li>Water Bottle</li>
+                <li>Pets Care</li>
+                <li>Health & Fitness Accessories</li>
+                </ul>
+            </div>
+
+            <div class="tool">
+               <h1>Tools</h1>
+                <ul>
+                <li>Pressure Washers</li>
+                <li>Laser Measures</li>
+                <li>Screwdrivers</li>
+                <li>Flashlights</li>
+                <li>Cordless Drills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<!-- block - 5 -->
+    <div class="POCO">
+        <div class="innerMoblie">
+            <ul>
+                <li class="F">POCO F Series</li>
+                <li class="X">POCO X Series</li>
+                <li class="M">POCO M Series</li>
+                <li class="C">POCO C Series</li>
+            </ul>
+            
+            <div class="imgblock_F_Series">
+                {% for i in poc_o_F%}
+                <div class="imgblockDiv1"><img class="block1img" src="/media/{{i.pocoF1}}"><h1>{{i.pocoF1_h1}}</h1></div>
+                <div class="imgblockDiv2"><img class="block1img" src="/media/{{i.pocoF2}}"><h1>{{i.pocoF1_h2}}</h1></div>
+                <div class="imgblockDiv3"><img class="block1img" src="/media/{{i.pocoF3}}"><h1>{{i.pocoF1_h3}}</h1></div>
+                <div class="imgblockDiv4"><img class="block1img" src="/media/{{i.pocoF4}}"><h1>{{i.pocoF1_h4}}</h1></div>
+                <div class="imgblockDiv5"><img class="block1img" src="/media/{{i.pocoF5}}"><h1>{{i.pocoF1_h5}}</h1></div>
+                {% endfor %}
+            </div>
+
+            <div class="imgblock_X_Series">
+                {% for i in poc_o_X %}
+                <div class="imgblockDiv1"><img class="block1img" src="/media/{{i.POCOX1}}"><h1>{{i.POCOX1_h1}}</h1></div>
+                <div class="imgblockDiv2"><img class="block1img" src="/media/{{i.POCOX2}}"><h1>{{i.POCOX1_h2}}</h1></div>
+                <div class="imgblockDiv3"><img class="block1img" src="/media/{{i.POCOX3}}"><h1>{{i.POCOX1_h3}}</h1></div>
+                <div class="imgblockDiv4"><img class="block1img" src="/media/{{i.POCOX4}}"><h1>{{i.POCOX1_h4}}</h1></div>
+                <div class="imgblockDiv5"><img class="block1img" src="/media/{{i.POCOX5}}"><h1>{{i.POCOX1_h5}}</h1></div>
+                {% endfor %}
+            </div>
+
+            <div class="imgblock_M_Series">
+                {% for i in poc_0_M %}
+                <div class="imgblockDiv1"><img class="block1img" src="/media/{{i.POCOM1}}"><h1>{{i.POCOM1_h1}}</h1></div>
+                <div class="imgblockDiv2"><img class="block1img" src="/media/{{i.POCOM2}}"><h1>{{i.POCOM1_h2}}</h1></div>
+                <div class="imgblockDiv3"><img class="block1img" src="/media/{{i.POCOM3}}"><h1>{{i.POCOM1_h3}}</h1></div>
+                <div class="imgblockDiv4"><img class="block1img" src="/media/{{i.POCOM4}}"><h1>{{i.POCOM1_h4}}</h1></div>
+                {% endfor%}
+            </div>
+
+            <div class="imgblock_C_Series">
+                {% for i in poc_o_C %}
+                <div class="imgblockDiv1"><img class="block1img" src="/media/{{i.picS1}}"><h1>{{i.picS1_h1}}</h1></div>
+                <div class="imgblockDiv2"><img class="block1img" src="/media/{{i.picS2}}"><h1>{{i.picS1_h2}}</h1></div>
+                <div class="imgblockDiv3"><img class="block1img" src="/media/{{i.picS3}}"><h1>{{i.picS1_h3}}</h1></div>
+                {% endfor%}
+            </div>
+        </div>
+    </div>
+
+    {% endfor%}
+    
+<div class="overlay"></div>
+
+    <section class="section1">
+        {% for i in section1 %}
+        <div class="sectionDiv1">
+
+            <ul class="sectionDiv1Ul">
+            <li class="li11">{{i.li9}}</li><span>/</span>
+            <li class="li22">{{i.li10}}</li><span>/</span>
+            <li class="li33">{{i.li11}}</li>
+            </ul>
+
+            <h1>{{i.heading}}</h1>
+
+            <ul class="sectionDiv1Ul2">
+            <li class="li44">{{i.li12}}</li>
+            <li class="li55">{{i.li13}}</li><span>|</span>
+            <li class="li66">{{i.li14}}</li>
+            </ul>
+
+        </div>
+        {% endfor%}
+    </section>
+
+    <section class="sectionMain2">
+        <div class="boxes">
+            {% for i in section2 %}
+            <div class="innerboxex1">
+                <h1>{{i.box1_H1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box1_img}}">
+            </div>
+        
+            <div class="innerboxex2">
+                <h1>{{i.box2_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box2_img}}">
+            </div>
+
+            <div class="innerboxex3">
+                <h1>{{i.box3_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box3_img}}">
+            </div>
+
+            <div class="innerboxex4">
+                <h1>{{i.box4_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box4_img}}">
+            </div>
+           
+            <div class="innerboxex5">
+                <h1>{{i.box5_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box5_img}}">
+            </div>
+
+            <div class="innerboxex6">
+                <h1>{{i.box6_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box6_img}}">
+            </div>
+
+            <div class="innerboxex7">
+                <h1>{{i.box7_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box7_img}}">
+            </div>
+
+            <div class="innerboxex8">
+                <h1>{{i.box8_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box8_img}}">
+            </div>
+            
+            <div class="innerboxex9">
+                <h1>{{i.box9_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box9_img}}">
+            </div>
+
+            <div class="innerboxex10">
+                <h1>{{i.box10_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box10_img}}">
+            </div>
+
+            <div class="innerboxex11">
+                <h1>{{i.box11_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box11_img}}">
+            </div>
+            
+            <div class="innerboxex12">
+                <h1>{{i.box12_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box12_img}}">
+            </div>
+            
+            <div class="innerboxex13">
+                <h1>{{i.box13_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box13_img}}">
+            </div>
+            
+            <div class="innerboxex14">
+                <h1>{{i.box14_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box14_img}}">
+            </div>
+
+            <div class="innerboxex15">
+                <h1>{{i.box15_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box15_img}}">
+            </div>
+
+            <div class="innerboxex16">
+                <h1>{{i.box16_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box16_img}}">
+            </div>
+            
+            <div class="innerboxex17">
+                <h1>{{i.box17_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box17_img}}">
+            </div>
+
+            <div class="innerboxex18">
+                <h1>{{i.box18_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box18_img}}">
+            </div>
+            
+            <div class="innerboxex19">
+                <h1>{{i.box19_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box19_img}}">
+            </div>
+
+            <div class="innerboxex20">
+                <h1>{{i.box20_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box20_img}}">
+            </div>
+           
+            <div class="innerboxex21">
+                <h1>{{i.box21_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box21_img}}">
+            </div>
+
+            <div class="innerboxex22">
+                <h1>{{i.box22_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box22_img}}">
+            </div>
+
+            <div class="innerboxex23">
+                <h1>{{i.box23_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box23_img}}">
+            </div>
+
+             <div class="innerboxex24">
+                <h1>{{i.box24_h1}}</h1>
+                <button>Learn More</button>
+                <img src="/media/{{i.box24_img}}">
+            </div>
+            {%endfor%}
+        </div>
+    </section>
+
+    {%include 'footer.html' %}
+   
+
+     
+    <script src="{% static 'js/xx.js'%}"></script>
+
+</body>
+</html>

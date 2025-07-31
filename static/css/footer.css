@@ -1,0 +1,138 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.footer{
+    border: 2px solid black;
+    width: auto;
+    height: 58vh;
+    padding: 25px;
+    position: relative;
+    background-color: black;
+}
+.fa-facebook-f ,.fa-youtube ,.fa-x-twitter ,.fa-instagram ,.fa-square-xing{
+    font-size: 15px;
+    width: auto;
+    border-radius: 10px;
+    color:black;
+    background-color:#D0D0D0;
+    padding: 5px;
+    height: 2vh;
+    margin-left: 10px;
+    margin-top: 2vh;
+}
+.fa-facebook-f:hover ,.fa-youtube:hover ,.fa-x-twitter:hover ,.fa-instagram:hover ,.fa-square-xing:hover{
+    cursor: pointer;
+    background-color:#ffff;
+}
+.block1{
+    border: 2px solid black;
+    width: 18%;
+    height: auto;
+    padding: 15px;
+    position: absolute;
+}
+.block2{
+    border: 2px solid black;
+    width: 15%;
+    margin-left: 20rem;
+    padding: 14px;
+    position: absolute;
+}
+.block3{
+    border: 2px solid black;
+    width: 15%;
+    margin-left: 41rem;
+    padding: 10px;
+    position: absolute;
+}
+.block4{
+    border: 2px solid black;   
+    width: 20%; 
+    line-height: 2;
+    padding: 10px;
+    margin-left: 61rem;
+    position: absolute;
+}
+.block4 h6{
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #ffff;
+}
+.block4 input{
+    border: 1px solid white;
+    width: 120%;
+    color:  rgb(137,137,137);
+    border-radius: 10px;
+    padding: 14px;
+    margin-top: 3vh;
+    font-size: 15px;
+    background-color: transparent;
+}
+.block4 p{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #ffff; 
+    margin-top: 2vh;
+}
+.block1 h3{
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #ffff;
+}
+.block1 ul{
+    list-style: none;
+}
+.block1 ul li a{
+    text-decoration: none;
+    color: black;
+    line-height: 2.5;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: rgb(137,137,137);
+}
+.block1 ul li a:hover{
+    text-decoration:underline;
+    color:#ffff;
+}
+.block2 h3{
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #ffff;
+}
+.block2 ul{
+    list-style: none;
+}
+.block2 ul li a{
+    text-decoration: none;
+    color: black;
+    line-height: 2.5;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: rgb(137,137,137);
+}
+.block2 ul li a:hover{
+    text-decoration:underline;
+    color:#ffff;
+}
+.block3 h3{
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #ffff;
+}
+.block3 ul{
+    list-style: none;
+}
+.block3 ul li a{
+    text-decoration: none;
+    color: black;
+    line-height: 2.5;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: rgb(137,137,137);
+}
+.block3 ul li a:hover{
+    text-decoration:underline;
+    color:#ffff;
+} 
